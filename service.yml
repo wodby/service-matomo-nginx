@@ -17,12 +17,6 @@ configs:
   filepath: /etc/gotpl/preset/matomo.conf.tmpl
   config: preset.conf.tmpl
 
-volumes:
-- name: storage
-  from: backend
-  title: Storage
-  path: /mnt/files
-
 env:
 - name: NGINX_VHOST_PRESET
   value: matomo
