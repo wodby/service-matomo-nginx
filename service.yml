@@ -7,8 +7,6 @@ update: auto
 
 build: null
 
-settings: null
-
 labels:
 - matomo
 
