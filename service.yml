@@ -1,27 +1,37 @@
 name: matomo-nginx
 type: service
-from: php-nginx
+from: nginx
 title: Nginx (Matomo)
 
 update: auto
-    
-labels:
-- matomo
 
+links:
+- name: backend
+  title: Backend
+  required: true
+  env:
+  - name: NGINX_BACKEND_HOST
+    value: '{{link.host}}'
+  - name: NGINX_BACKEND_PORT
+    value: '{{link.port}}'
+  selectors:
+  - type: service
+    labels:
+    - matomo
+    
 build:
   dockerfile: Dockerfile
+  dockerignore: .dockerignore
+
+labels:
+- matomo
+- nginx
 
 configs:
 - name: preset
   title: Matomo preset
   filepath: /etc/gotpl/preset/matomo.conf.tmpl
   config: preset.conf.tmpl
-
-settings:
-- name: docroot
-  title: Nginx docroot
-  var: DOCROOT_SUBDIR
-  default: ''
 
 env:
 - name: NGINX_VHOST_PRESET
