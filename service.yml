@@ -1,6 +1,6 @@
 name: matomo-nginx
 type: service
-from: nginx
+from: php-nginx
 title: Nginx (Matomo)
 
 update: auto
@@ -8,8 +8,11 @@ update: auto
 labels:
 - matomo
 
+build:
+  dockerfile: Dockerfile
+
 configs:
-- name: preset 
+- name: preset
   title: Matomo preset
   filepath: /etc/gotpl/preset/matomo.conf.tmpl
   config: preset.conf.tmpl
