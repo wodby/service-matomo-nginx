@@ -17,6 +17,12 @@ configs:
   filepath: /etc/gotpl/preset/matomo.conf.tmpl
   config: preset.conf.tmpl
 
+settings:
+- name: docroot
+  title: Nginx docroot
+  var: DOCROOT_SUBDIR
+  default: ''
+
 env:
 - name: NGINX_VHOST_PRESET
   value: matomo
