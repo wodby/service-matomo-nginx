@@ -4,7 +4,9 @@ from: nginx
 title: Nginx (Matomo)
 
 update: auto
-    
+
+build: null
+
 labels:
 - matomo
 
