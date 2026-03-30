@@ -5,10 +5,9 @@ title: Nginx (Matomo)
 
 update: auto
 
-build:
-  connect: false
+build: null
 
-settings: []
+settings: null
 
 labels:
 - matomo
