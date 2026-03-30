@@ -1,0 +1,12 @@
+.git
+.gitignore
+vendor
+node_modules
+composer.*
+package.json
+package-lock.json
+**/*.php
+console
+tests
+core
+**/.*
