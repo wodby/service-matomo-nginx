@@ -2,7 +2,7 @@ name: matomo-nginx
 type: service
 from: nginx
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.3"
+fromVersion: "1.0.4"
 title: Nginx (Matomo)
 
 
@@ -32,7 +32,9 @@ configs:
 - name: preset
   title: Matomo preset
   filepath: /etc/gotpl/preset/matomo.conf.tmpl
-  config: preset.conf.tmpl
+  default:
+    source: image
+    filepath: /etc/gotpl/presets/matomo.conf.tmpl
 
 env:
 - name: NGINX_VHOST_PRESET
