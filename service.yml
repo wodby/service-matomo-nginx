@@ -21,6 +21,7 @@ links:
     - matomo
 
 build:
+  link: backend
   dockerfile: Dockerfile
   dockerignore: .dockerignore
 
