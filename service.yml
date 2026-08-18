@@ -22,7 +22,6 @@ links:
 
 build:
   link: backend
-  dockerfile: Dockerfile
   dockerignore: .dockerignore
 
 labels:
@@ -40,3 +39,5 @@ configs:
 env:
 - name: NGINX_VHOST_PRESET
   value: matomo
+- name: WODBY_INIT_ACTION
+  value: init
