@@ -2,7 +2,7 @@ name: matomo-nginx
 type: service
 from: nginx
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.9"
+fromVersion: "1.0.10"
 title: Nginx (Matomo)
 
 
