@@ -31,7 +31,7 @@ labels:
 configs:
 - name: preset
   title: Matomo preset
-  filepath: /etc/gotpl/preset/matomo.conf.tmpl
+  filepath: /etc/gotpl/presets/matomo.conf.tmpl
   default:
     source: image
     filepath: /etc/gotpl/presets/matomo.conf.tmpl
