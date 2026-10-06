@@ -1,6 +1,7 @@
 name: matomo-nginx
 type: service
 from: nginx
+guidance: GUIDANCE.md
 fromVersionConstraint: "^2.0.0"
 fromVersion: "2.0.1"
 title: Nginx (Matomo)
